@@ -1,0 +1,36 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+
+$facebook-color: #3b5998;
+$google-color: #dd4b39;
+
+.btn-facebook,
+.btn-google{
+    color: white;
+    &:hover, &:active, &focus{
+        color: white;
+    }
+}
+
+.btn-facebook{
+    background-color: $facebook-color;
+    border-color: darken($facebook-color, 3%);
+}
+
+.btn-google{
+    background-color: $google-color;
+    border-color: darken($google-color, 3%);
+}
