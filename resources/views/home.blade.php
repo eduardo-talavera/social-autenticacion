@@ -8,13 +8,16 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    @if (session()->has('flash'))
+                        <div class="alert alert-success">{{ session('flash') }}</div>
                     @endif
 
                     You are logged in!
+                    @if(session('alert'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif    
                 </div>
             </div>
         </div>

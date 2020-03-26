@@ -68,11 +68,11 @@
                 </div>
 
                 <div class="card-footer text-center">
-                    <a href="#" class="btn btn-facebook">
+                    <a href="{{ route('social.provider', 'facebook') }}" class="btn btn-facebook">
                         <i class="fab fa-facebook-square"></i>
                         Ingresar con facebook
                     </a>
-                    <a href="#" class="btn btn-google">
+                    <a href="{{ route('social.provider', 'google') }}" class="btn btn-google">
                         <i class="fab fa-google"></i>
                         Ingresar con Google
                     </a>
