@@ -42,12 +42,12 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://localhost:8080/social-autenticacion/public/login/google/callback',
+        'redirect' => 'http://practicante.hunabku.com.mx/web/public/login/google/callback',
     ],
     'facebook' => [
         'client_id' => env('FACEBOOK_CLIENT_ID'),
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
-        'redirect' => 'http://localhost:8080/social-autenticacion/public/login/facebook/callback',
+        'redirect' => 'http://practicante.hunabku.com.mx/web/public/login/facebook/callback',
     ],
 
 ];
