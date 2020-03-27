@@ -11,7 +11,7 @@ _Instrucciones de Instalacion._
 _Tener instalado node, composer y laravel 5.7 en caso de no tener laravel ni composer instalados contar con un emulador como laragon para windows o valet para usuarios mac_
 
 
-### Instalaciónes becesarias 🔧
+### Instalaciónes necesarias 🔧
 
 
 _instalar dependencias de node_
@@ -30,7 +30,7 @@ $ composer install
 ## configuraciones adicionales ⚙️
 
 
-_copiar el archivo .env.example ubicado en la raiz del proyecto renombrarlo a.env y remplazar los valores con la configuracion que corresponda a u entorno de trabajo_
+_copiar el archivo .env.example ubicado en la raiz del proyecto renombrarlo a .env y remplazar los valores con la configuracion correspondiente_
 
 ```
 APP_URL=http://localhost
@@ -41,6 +41,7 @@ DB_PASSWORD=your_password
 ```
 ### Configurar la variables para la autenticacion con redes sociales 🔩
 
+_en el mismo archivo .env stear las variables a continuacion con los valores que proveen las apis de autenticacion_
 
 
 ```
@@ -53,7 +54,7 @@ GOOGLE_CLIENT_SECRET=
 ```
 ## Configuracion en el archivo services.php 🛠️
 
-_Agrega tu url base en la etiqueta <YOUR_URL_BASE>_
+_este archivo se encuentra en la carpeta config del proyecto agrega tu url base en la etiqueta <YOUR_URL_BASE>_
 
 
 ```
@@ -70,6 +71,16 @@ _Agrega tu url base en la etiqueta <YOUR_URL_BASE>_
 
 ```
 
+### ejecutar migraciones 📦
+
+_ejecutamos las migraciones para llenar la base dedatos y con el parametro --seed hacemos una insercion predefinida de un usuario a modo de prueba el cual es
+user: john@mail.com
+password: 123123_
+
+```
+$ php artisan migrate --seed
+```
+
 ### Correr app  🔩
 
 _para ejecutar la app escribir el siguiente comando en la terminal o correr desde el emulador_
@@ -78,9 +89,4 @@ _para ejecutar la app escribir el siguiente comando en la terminal o correr desd
 $ php artisan serve
 ```
 
-### ejecutar migraciones 📦
 
-
-```
-$ php artisan migrate --seed
-```
