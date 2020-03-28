@@ -42,12 +42,12 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://young-earth-45110.herokuapp.com/public/login/google/callback',
+        'redirect' => 'http://young-earth-45110.herokuapp.com/login/google/callback',
     ],
     'facebook' => [
         'client_id' => env('FACEBOOK_CLIENT_ID'),
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
-        'redirect' => 'http://young-earth-45110.herokuapp.com/public/login/facebook/callback',
+        'redirect' => 'http://young-earth-45110.herokuapp.com/login/facebook/callback',
     ],
 
 ];
