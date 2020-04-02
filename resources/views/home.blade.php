@@ -12,7 +12,7 @@
                         <div class="alert alert-success">{{ session('flash') }}</div>
                     @endif
 
-                    You are logged in!
+                    Has iniciado sesion
                     @if(session('alert'))
                         <div class="alert alert-success">
                             {{ session('status') }}

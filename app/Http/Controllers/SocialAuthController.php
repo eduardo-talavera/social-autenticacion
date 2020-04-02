@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+// use Illuminate\Support\Facades\DB;
 use Socialite;
 
 class SocialAuthController extends Controller
@@ -16,18 +17,28 @@ class SocialAuthController extends Controller
    public function handleProviderCallback($provider)
    {
        try {
-           $user = Socialite::driver($provider)->user();
-           $createUser = User::firstOrcreate([
-               'email' => $user->getEmail()
-           ],[
-              'name' => $user->getName()
-           ]);
 
-           auth()->login($createUser);
+           
+            $user = Socialite::driver($provider)->user();
+           
+                $userName = $user->getName();
+                $userEmail = $user->getEmail();
 
-        return redirect()
-            ->route('home')
-            ->with('flash', "Bienvenido $createUser->name");
+            $userQ = User::where('email', $user->getEmail())->first();
+
+    
+         if ($userQ) {
+                auth()->login($userQ);
+
+                return redirect()
+                    ->route('home')
+                    ->with('flash', "Bienvenido $userQ->name");
+         } else{
+            return redirect()
+                ->route('register',compact('userName','userEmail'))
+                ->with('flash', 'El usuario '.$user->getEmail().' aun no ha sido registrado');
+         }
+
 
        } catch (\GuzzleHttp\Exception\ClientException $e) {
            dd($e);
