@@ -17,13 +17,13 @@ _entrar al projecto en un terminal de comandos... escriba cd en el terminal  lue
 
 _instalar dependencias de node_
 
-```
+```cmd
 $ npm install
 ```
 
 _instalar dependencias de composer_
 
-```
+```cmd
 $ composer install
 ```
 
@@ -33,7 +33,7 @@ $ composer install
 
 _copiar el archivo .env.example ubicado en la raiz del proyecto renombrarlo a .env y remplazar los valores con la configuracion correspondiente_
 
-```
+```env
 APP_URL=http://localhost
 
 DB_DATABASE=your_database
@@ -45,7 +45,7 @@ DB_PASSWORD=your_password
 _en el mismo archivo .env stear las variables a continuacion con los valores que proveen las apis de autenticacion_
 
 
-```
+```env
 
 FACEBOOK_CLIENT_ID=
 FACEBOOK_CLIENT_SECRET=
@@ -58,7 +58,8 @@ GOOGLE_CLIENT_SECRET=
 _este archivo se encuentra en la carpeta config del proyecto agrega tu url base en la etiqueta <YOUR_URL_BASE>_
 
 
-```
+```php
+
 'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
@@ -78,7 +79,7 @@ _ejecutamos las migraciones para llenar la base dedatos y con el parametro --see
 user: john@mail.com
 password: 123123_
 
-```sell
+```cmd
 $ php artisan migrate --seed
 ```
 
