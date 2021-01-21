@@ -13,6 +13,7 @@ _Tener instalado node, composer y laravel 5.7 en caso de no tener laravel ni com
 
 ### Instalaciónes necesarias 🔧
 
+_entrar al projecto en un terminal de comandos... escriba cd en el terminal  luego arrastre la carpeta descargada y pulse enter.
 
 _instalar dependencias de node_
 
@@ -77,7 +78,7 @@ _ejecutamos las migraciones para llenar la base dedatos y con el parametro --see
 user: john@mail.com
 password: 123123_
 
-```
+```sell
 $ php artisan migrate --seed
 ```
 
@@ -85,7 +86,7 @@ $ php artisan migrate --seed
 
 _para ejecutar la app escribir el siguiente comando en la terminal o correr desde el emulador_
 
-```
+```shell
 $ php artisan serve
 ```
 
